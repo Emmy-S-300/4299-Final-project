@@ -1,0 +1,9 @@
+#commands
+docker-compose run --rm app bash -c "django-admin startproject app ."
+docker-compose run --rm app bash -c "python manage.py startapp final"
+docker-compose run --rm app bash -c "python manage.py makemigrations"
+docker-compose run --rm app bash -c "python manage.py migrate"
+docker-compose run --rm app bash -c "python manage.py createsuperuser"
+
+docker-compose build
+docker-compose up -d

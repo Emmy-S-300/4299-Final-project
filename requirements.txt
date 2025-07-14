@@ -1,0 +1,5 @@
+Django
+django_bootstrap5
+django-tinymce
+psycopg2-binary
+uWSGI

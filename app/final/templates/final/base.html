@@ -1,0 +1,23 @@
+{% extends 'final/bootstrap.html' %}
+
+(% load django_bootstrap5 %)
+
+{% load static %}
+
+{% block bootstrap5_extra_head %}
+{% endblock %}
+
+{% block bootstrap5_content %}
+
+    {% include 'final/navbar.html' %}
+
+    <main>
+
+    {% block content %}
+        (no content)
+    {% endblock %}
+
+    </main>
+    <!-- FOOTER -->
+    {% include 'final/footer.html' %}
+{% endblock %}
