@@ -43,11 +43,11 @@ pipeline{
         sshagent(['ec2-ssh-key']) {
           sh """
             ssh -o StrictHostKeyChecking=no ${EC2_HOST} '
+              cd /home/ubuntu/4299-Final-project &&
               aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${ECR_REGISTRY} &&
-              docker pull ${FULL_IMAGE_NAME} &&
-              docker stop app || true &&
-              docker rm app || true &&
-              docker run -d --name app -p 80:8000 ${FULL_IMAGE_NAME}
+              docker-compose down -v &&
+              docker-compose pull &&
+              docker-compose up -d --build
             '
         """
         }
