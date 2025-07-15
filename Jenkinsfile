@@ -4,7 +4,7 @@ pipeline{
   environment{
     ECR_REGISTRY = '745490702538.dkr.ecr.us-east-1.amazonaws.com'
     REPOSITORY = 'eschonaufinalproject'
-    IMAGE_NAME = 'Final'
+    IMAGE_NAME = 'finalproject'
     FULL_IMAGE_NAME = "${ECR_REGISTRY}/${REPOSITORY}:${IMAGE_NAME}"
     EC2_HOST = 'ubuntu@44.204.38.8'
   }
