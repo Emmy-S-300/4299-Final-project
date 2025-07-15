@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'djangohenrybookstorekey')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 0))) #True
 
-ALLOWED_HOSTS = ['54.158.123.29']
+ALLOWED_HOSTS = ['44.204.38.8']
 
 # Application definition
 
