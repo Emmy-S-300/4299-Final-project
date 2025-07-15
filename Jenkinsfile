@@ -40,7 +40,7 @@ pipeline{
     }
     stage('Deploy to EC2'){
       steps{
-        sshagent(credentials: ['ec2-ssh-key']) {
+        sshagent(['ec2-ssh-key']) {
           sh """
             ssh -o StrictHostKeyChecking=no ${EC2_HOST} '
               aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${ECR_REGISTRY} &&
